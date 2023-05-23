@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  z-index: 2;
+  line-height: 1.5;
+  background: #F3F2ED;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-family: "Source Sans Pro", "Arial", sans-serif; */
+  /* font-family: serif; */
+}
+
+#navbar {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#navbar .nav {
+  display: grid;
+  grid-template-columns: 6fr 3fr 3fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+#navbar .logo {
+  width: 180px;
+}
+
+#navbar .social {
+  justify-self: center;
+
+}
+
+#navbar .social a {
+  color: #778899;
+  font-size: medium;
+  text-decoration: none;
+}
+
+.fa-2x {
+  font-size: 2.2em;
+}
+
+#navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  
+}
+
+ #navbar li a {
+  text-decoration: none;
+  padding: 0.75rem;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#navbar ul li .about {
+  background-color: #B22222;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+ 
+#navbar ul li .about:hover {
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  color: black;
+ } 
+
+
+#navbar ul li .home {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+ 
+#navbar ul li .home:hover {
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  color: black;
+ } 
+
+#about .box {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+#about .content {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  grid-gap: 1.5rem;
+}
+
+#about .card {
+  background: white;
+  padding: 1rem;
+}
+
+#about .content >*:first-child {
+  grid-row: 1 / 3;
+}
+
+#about h1 {
+  font-size: 3rem;
+}
+
+#about h2 {
+  margin-bottom: 0.55rem;
+  line-height: 1.3;
+}
+
+#about p {
+  margin: 0.5rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about .bg-primary {
+  background: #E2E2E2;
+}
+
+#about a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  color: white;
+  background-color: #333;
+  padding: 0.55rem;
+}
+
+#foot {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+}
+
+#foot .box {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  grid-gap: 1.5rem;
+}
+
+#foot .box img {
+  width: 150px;
+}
+
+#foot .box p {
+  margin: 0.5rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#foot .box h3 {
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+
+#foot .box h2 {
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+
+#foot .box form input[type="email"]  {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#foot .box form input[type="submit"]  {
+  width: 90%;
+}
+
+#foot .box .btn {
+  display: inline-block;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+}
+
+#foot .box .btn-primary {
+  background-color: #c72727;
+}
+
+#foot .box .btn-secondary {
+  background-color: #E56717;
+}
+
+#foot .box a {
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+#foot a:hover {
+  color: #c72727;
+}
+
+#foot .box ul {
+ list-style: none; 
+}
+
+#foot .box li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted grey;
+  width: 90%;
+  color: white;
+}
+
+#foot .box > *:last-child {
+  background: #444;
+  grid-column: 1 / span 4;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: .7rem;
+}
+
+
+@media screen and (max-width: 750px) {
+  #navbar .nav {
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+  }
+
+  .fa-2x {
+    font-size: 1em;
+  }
+
+  #navbar .logo {
+    justify-self: center;
+    width: 120px;
+  }
+
+  #navbar ul {
+    justify-self: center;
+  }
+
+  #navbar li a {
+    padding: .5rem;
+  }
+
+  #about .content {
+    grid-template-columns: 1fr;
+  }
+
+  #about h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #foot .box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #foot .box >*:first-child {
+    border-bottom: 1px dotted #444;
+    padding-bottom: 1rem;
+  }
+  
+  #foot .box >*:nth-child(2) {
+    border-bottom: 1px dotted #444;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #about h1 {
+    font-size: 1.4rem;
+  }
+
+  #navbar li a {
+    padding: 0.3rem;
+  }
+}
+
